@@ -2,11 +2,19 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 20px;
+}
+
 body {
   line-height: 1.6;
   font-size: 20px;
   font-family: 'Droid Serif', Times, serif;
-  color: var(--color-text-dark)
+  color: var(--color-text-dark);
+}
+
+img{
+  max-width: 100%;
 }
 
 h1,
@@ -39,6 +47,19 @@ h6 {
 
 .heading-xsmall {
   font-size: 16px;
+}
+
+.container{
+  width: 96vw;
+  margin: 0 auto;
+}
+
+.centralized {
+  text-align: center;
+}
+
+#logo, #menu{
+  width: 50vw;
 }
 
 /* "#" - IDs */
@@ -78,6 +99,71 @@ h6 {
 /*
 /* Media Queries Examples
 */
+
+.all-workers {
+  display: flex;
+  justify-content: space-between;
+}
+
+.workers {
+  text-align: center;
+}
+
+.worker-name {
+  margin-bottom: 0;
+  line-height: 1.2;
+  font-family: 'Open sans', Helvetica, Arial, Sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-interface-commom-dark);
+}
+
+.app-icon {
+  display: inline-block;
+  vertical-align: top;
+  width: 9vw;
+  margin: 4vh 0.5vw; 
+  line-height: 1.2;
+  text-align: center;
+  font-weight: 800;
+  font-size: 0.8rem;
+  color: var(--color-interface-commom-dark);
+}
+
+.app-icon-img {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 480px) {
+  .container{
+    width: 94vw;
+  }
+
+  .all-workers{
+    flex-direction: column;
+  }
+
+  .workers {
+    margin-bottom: 1.2rem;
+  }
+
+  .app-icon {
+    width: 30vw;
+    font-size: 0.7rem;
+    font-weight: 700;
+  }
+
+}
+
+@media(max-width: 1440px) {
+  .container{
+    width: 67vw;
+  }
+
+  .workers{
+    width: 25vw;
+  }
+}
 
 /* Smartphone Portrait */
 @media(min-width: 480px) and (max-width: 768px) {
